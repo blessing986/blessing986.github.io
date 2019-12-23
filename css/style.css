@@ -1,0 +1,473 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 800px) {
+  nav #navbar ul {
+    margin-left: 25rem;
+  }
+}
+
+nav #navbar ul li {
+  margin-top: 1rem;
+}
+
+nav #navbar ul a {
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Fredoka One', cursive;
+}
+
+nav #navbar ul a:hover {
+  background: none;
+}
+
+.cbp-af-header-shrink {
+  background-color: #000;
+  -webkit-box-shadow: 0px 4px 24px -1px #000;
+  box-shadow: 0px 4px 24px -1px #000;
+  color: #fff;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  opacity: 0.8;
+}
+
+@media (max-width: 1500px) {
+  nav .navbar-header img {
+    width: 200px;
+  }
+}
+
+section.home .fill-screen {
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 10%;
+}
+
+section.home .container h2 {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-family: 'Alatsi', sans-serif;
+  letter-spacing: 0.09rem;
+  word-spacing: 0.1rem;
+}
+
+section.home .container p {
+  text-align: center;
+  color: #fff;
+  margin-top: 4rem;
+  width: 70%;
+  margin: auto;
+  line-height: 3rem;
+  font-size: large;
+  letter-spacing: 0.07rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section.home .container h2, section.home .container p {
+  display: -webkit-box;
+  /* display: -ms-flexbox; */
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  /* -ms-flex-flow: row wrap; */
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  /* -ms-flex-pack: center; */
+  justify-content: center;
+  -webkit-box-align: center;
+  /* -ms-flex-align: center; */
+  align-items: center;
+}
+
+section.home .view-features a {
+  background: none;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+section.home .view-features a:hover {
+  background: #2792ff;
+  color: #fff;
+}
+
+section.home .down-button {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+section.home .down-button i {
+  color: #fff;
+}
+
+/* ABOUT SECTION */
+
+section.aboutUS {
+  margin-bottom: 13rem;
+  margin-top: 5rem;
+}
+
+section.aboutUS .image img {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  display: block;
+  min-width: 10%;
+  width: 10%;
+  border-radius: 30%;
+  padding: 0.2rem;
+  -webkit-box-shadow: 0px 0px 17px -1px #000;
+  box-shadow: 0px 0px 17px -1px #000;
+  text-align: center;
+  margin-bottom: 4rem;
+  -webkit-border-radius: 30%;
+  -moz-border-radius: 30%;
+  -ms-border-radius: 30%;
+  -o-border-radius: 30%;
+}
+
+section.aboutUS h2 {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+}
+
+section.aboutUS p {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.line-border {
+  display: block;
+  width: 100px;
+  height: 3px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(77, 140, 245);
+}
+
+section.aboutUS .col-md-7 h5 {
+  margin-top: 50px;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  section.aboutUS .col-md-5 img {
+    width: 280px;
+  }
+}
+
+section.portfolio h2 {
+  text-align: center;
+}
+
+section.portfolio p {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.log-images {
+  margin-top: 4rem;
+}
+
+/* HOVERABLE IMAGES */
+
+/* Container needed to position the overlay. Adjust the width as needed */
+
+.image1, .image2, .image3, .image4 {
+  position: relative;
+  width: 24.7%;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .image1, .image2, .image3, .image4 {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Make the image to responsive */
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .5s ease;
+  opacity: 0.7;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+
+.image1:hover .overlay, .image2:hover .overlay, .image3:hover .overlay, .image4:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+
+.text {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+section.use-us {
+  margin-bottom: 1.5%;
+  margin-top: 9rem;
+}
+
+section.use-us .grid .card-text {
+  padding-top: 60px;
+}
+
+section.use-us .grid .work-with-us h1 {
+  text-align: center;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+section.use-us .grid .work-with-us p {
+  margin-top: 0px;
+}
+
+section.use-us .grid .work-with-us .line-border {
+  margin-top: 5rem;
+}
+
+section.use-us .grid .card-text h4 {
+  color: #303030;
+  font-size: 25px;
+  font-family: 'Viga', sans-serif;
+}
+
+section.use-us .grid .card-text p {
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section.use-us .grid .card-text img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.use-us .grid .card-text i {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4rem;
+  color: #2792ff;
+}
+
+@media (max-width:1000px) {
+  section.use-us .grid .card-text h4 {
+    text-align: center
+  }
+}
+
+/* section for latest news */
+
+section.latest-news {
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+}
+
+section.latest-news .head h2, section.latest-news .head p {
+  text-align: center;
+}
+
+section.latest-news .head p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+section.latest-news .card-text {
+  margin-top: 5rem;
+  display: block;
+}
+
+section.latest-news .card-text img {
+  width: 100%;
+}
+
+section.latest-news .card-text p {
+  font-family: 'Quicksand', sans-serif;
+}
+
+section.latest-news .day-added {
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+section.latest-news .card-text a {
+  color: #2792ff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+section.latest-news .card-text a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+footer {
+  background: #303030;
+  color: #fff;
+}
+
+.social-media .col-md-12 a i {
+  color: #fff;
+  font-weight: bold;
+  padding-right: 2rem;
+}
+
+.social-media .col-md-12 a i:hover {
+  color: #008CBA;
+}
+
+.social-media .col-md-12 {
+  margin-top: 2rem;
+  text-align: center;
+  /* word-spacing: 2rem; */
+}
+
+footer .copy {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  footer .copy h5 {
+    line-height: 3rem;
+    font-size: 11px;
+    color: rgb(158, 154, 154);
+  }
+}
+
+section.contact {
+  margin-top: 5.5rem;
+}
+
+section.contact h1 {
+  text-align: center;
+  margin-top: 3rem;
+  font-family: 'Fredoka One', cursive;
+}
+
+section.contact p {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+section.contact form {
+  border: thin solid #2792ff;
+  width: 70%;
+  padding: 2rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1rem;
+  /* min-height: 500px; */
+  margin-bottom: 40px;
+  margin-top: 2rem;
+}
+
+section.contact form input, section.contact form textarea, section.contact form label, section.contact form button {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+}
+
+@media (max-width: 768px) {
+  section.contact form {
+    width: 100%;
+    border: none;
+  }
+}
+/* the back to top scroll button */
+
+#myBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #303030;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 17px 20px;
+  /* Some padding */
+  border-radius: 50%;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */
+}
